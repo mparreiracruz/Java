@@ -5,9 +5,16 @@ public class Aula02 {
         Caneta c1 = new Caneta();
         c1.cor = "Azul";
         c1.ponta = 0.5f;
-        c1.tampada = false;
-        c1.modelo = "Bic";
-        c1.carga = 90;
+        c1.modelo = "bic";
+        c1.tampar();
+        c1.rabiscar();
         c1.status();
+
+        Caneta c2 = new Caneta();
+        c2.modelo = "Hostnet";
+        c2.cor = "Preta";
+        c2.destampar();
+        c2.rabiscar();
+        c2.status();
     }
 }
