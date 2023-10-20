@@ -9,6 +9,7 @@ public class Caneta {
     boolean tampada;
 
     void status() {
+
         System.out.println("Modelo: " + this.modelo);
         System.out.println("Uso caneta " + this.cor);
         System.out.println("A ponta é " + this.ponta);
@@ -17,7 +18,7 @@ public class Caneta {
 
     }
     void rabiscar() {
-  
+
     }
 
     void tampar() {
