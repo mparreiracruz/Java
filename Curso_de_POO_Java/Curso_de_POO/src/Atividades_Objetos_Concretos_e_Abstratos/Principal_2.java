@@ -27,7 +27,6 @@ package Atividades_Objetos_Concretos_e_Abstratos;
 
  caracteristicas (coisas que ela tem):
  >base
- >ponta
  >fio
  >haste
 
@@ -76,23 +75,18 @@ package Atividades_Objetos_Concretos_e_Abstratos;
   >ligar fogão
   >desligar fogão
 * */
-public class Principal {
-    public static void main(String[] args){
+public class Principal_2 {
+    public static void main(String[] args) {
+        Microfone m1 = new Microfone();
+        m1.base = "Circular";
+        m1.fio = 20;
+        m1.haste = "Plastico";
+        m1.caracteristicas();
+        m1.ligado();
+        m1.capturar_audio();
 
-        Relogio r1 = new Relogio();
-        r1.tela = "LCD";
-        r1.pulseira = "silicone";
-        r1.caixa = "metal";
-        r1.bateria = 90;
-        r1.caracteristicas();
-        r1.horadodia();
-        r1.cronometro();
-        r1.contagemregressiva();
-        r1.horamundial();
-
-        Relogio r2 = new Relogio();
-        r2.tela = "Analógica";
-        r2.pulseira = "Ouro";
-        r2.caracteristicas();
+        Microfone m2 = new Microfone();
+        m2.base = "Fibra de carbono";
+        m2.caracteristicas();
     }
 }

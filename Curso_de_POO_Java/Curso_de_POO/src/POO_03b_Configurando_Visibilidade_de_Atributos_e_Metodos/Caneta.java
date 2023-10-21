@@ -1,11 +1,11 @@
-package POO_2b_Criando_Classes_e_Objetos_em_Java;
+package POO_03b_Configurando_Visibilidade_de_Atributos_e_Metodos;
 
 public class Caneta {
     public String modelo;
     public String cor;
     private float ponta;
-    private int carga;
-    protected boolean tampada;
+    protected int carga;
+    private boolean tampada;
     void status() {
         System.out.println("Modelo: " + this.modelo);
         System.out.println("Uso caneta " + this.cor);
@@ -14,7 +14,7 @@ public class Caneta {
         System.out.println("Está tampada ? " + this.tampada);
 
     }
-    public void rabiscar() {
+    protected void rabiscar() {
         if(this.tampada == true){
             System.out.println("ERRO! Não posso rabiscar!");
         } else {
@@ -22,11 +22,11 @@ public class Caneta {
         }
     }
 
-    void tampar(){
+    public void tampar(){
         this.tampada = true;
     }
 
-    void destampar() {
+    public void destampar() {
         this.tampada = false;
     }
 }
