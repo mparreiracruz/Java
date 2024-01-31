@@ -1,18 +1,16 @@
 package POO_04b_Metodos_Getter_Setter_e_Construtor;
 
 public class Caneta {
-    public String modelo;
+    private String modelo;
     private float ponta;
-    private boolean tampada;
-    private boolean destampada;
     private String cor;
+    private boolean tampada;
 
-    public Caneta(String modelo, float ponta, boolean tampada, boolean destampada, String cor) {
+    public Caneta(String modelo, float ponta, String cor, boolean tampada) {
         this.modelo = modelo;
         this.ponta = ponta;
-        this.tampada = tampada;
-        this.destampada = destampada;
         this.cor = cor;
+        this.tampada = tampada;
     }
 
     public String getModelo() {
@@ -31,7 +29,15 @@ public class Caneta {
         this.ponta = ponta;
     }
 
-    public boolean isTampada() {
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public boolean getTampada() {
         return tampada;
     }
 
@@ -39,19 +45,11 @@ public class Caneta {
         this.tampada = tampada;
     }
 
-    public boolean isDestampada() {
-        return destampada;
-    }
-
-    public void setDestampada(boolean destampada) {
-        this.destampada = destampada;
-    }
-
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        this.cor = cor;
+    public void status() {
+    System.out.println("Informações da caneta: ");
+    System.out.println("Modelo: " + this.getModelo());
+    System.out.println("Ponta: " + this.getPonta());
+    System.out.println("Cor: " + this.getCor());
+    System.out.println("Está tampada ?" + this.getTampada());
     }
 }
