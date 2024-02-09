@@ -23,47 +23,52 @@ package Atividades_Objetos_Concretos_e_Abstratos.Usando_Getters_e_Setters;
  >luz desligada
 * */
 public class Relogio {
-    public String hora_do_dia;
-    public String hora_mundial;
-    private boolean tela_on_off;
-    public String pulseira;
-    private boolean botoes_on_off;
-    public int bateria;
-    private boolean relogio_on_off;
+   private String tela_tipo;
+   private boolean tela_on_off;
+   public int tela_tempo;
+   public String pulseira;
+   public String caixa;
+   private boolean botao_a;
+   private boolean botao_b;
+   private boolean botao_c;
+   private boolean botao_d;
+   public float bateria;
 
-
-
-    public Relogio(Boolean relogio_on_off, boolean botoes_on_off, String pulseira, String hora_do_dia, String hora_mundial, int bateria){
-    this.hora_do_dia = hora_do_dia;
-    this.hora_mundial = hora_mundial;
-    this.tela_ligada();
-    this.relogio_ligado();
-    this.botao_ligado();
-    this.pulseira = pulseira;
-    this.bateria = bateria;
-    }
-    private void tela_ligada(){
-        this.tela_on_off = true;
-    }
-    private void tela_desligada(){
-        this.tela_on_off = false;
-    }
-    private void relogio_ligado(){
-        this.relogio_on_off = true;
+    public Relogio(String tela_tipo, boolean tela_on_off,int tela_tempo, String pulseira, String caixa, boolean botao_a, boolean botao_b, boolean botao_c, boolean botao_d, float bateria) {
+        this.tela_tipo = tela_tipo;
+        this.tela_on_off = tela_on_off;
+        this.tela_tempo = tela_tempo;
+        this.pulseira = pulseira;
+        this.caixa = caixa;
+        this.botao_a = botao_a;
+        this.botao_b = botao_b;
+        this.botao_c = botao_c;
+        this.botao_d = botao_d;
+        this.bateria = bateria;
     }
 
-    private void relogio_desligado(){
-        this.relogio_on_off = false;
+    public String getTela_tipo() {
+        return tela_tipo;
     }
-    private void botao_ligado() {
-        this.botoes_on_off = true;
+
+    public void setTela_tipo(String tela_tipo) {
+        tela_tipo = tela_tipo;
     }
-    public boolean gettTela_on_off() {
+
+    public boolean isTela_on_off() {
         return tela_on_off;
     }
 
     public void setTela_on_off(boolean tela_on_off) {
-        this.tela_on_off = tela_on_off;
+        tela_on_off = tela_on_off;
+    }
+
+    public int getTela_tempo() {
+        return tela_tempo;
+    }
+
+    public void setTela_tempo(int tela_tempo) {
+        tela_tempo = tela_tempo;
     }
 
     public String getPulseira() {
@@ -74,37 +79,73 @@ public class Relogio {
         this.pulseira = pulseira;
     }
 
-    public boolean getBotoes_on_off() {
-        return botoes_on_off;
+    public String getCaixa() {
+        return caixa;
     }
 
-    public void setBotoes_on_off(boolean botoes_on_off) {
-        this.botoes_on_off = botoes_on_off;
+    public void setCaixa(String caixa) {
+        this.caixa = caixa;
     }
 
-    public int getBateria() {
+    public boolean isBotao_a() {
+        return botao_a;
+    }
+
+    public void setBotao_a(boolean botao_a) {
+        this.botao_a = botao_a;
+    }
+
+    public boolean isBotao_b() {
+        return botao_b;
+    }
+
+    public void setBotao_b(boolean botao_b) {
+        this.botao_b = botao_b;
+    }
+
+    public boolean isBotao_c() {
+        return botao_c;
+    }
+
+    public void setBotao_c(boolean botao_c) {
+        this.botao_c = botao_c;
+    }
+
+    public boolean isBotao_d() {
+        return botao_d;
+    }
+
+    public void setBotao_d(boolean botao_d) {
+        this.botao_d = botao_d;
+    }
+
+    public float getBateria() {
         return bateria;
     }
 
-    public void setBateria(int bateria) {
+    public void setBateria(float bateria) {
         this.bateria = bateria;
     }
-    public boolean getRelogio_on_off() {
-        return relogio_on_off;
-    }
-    public void setRelogio_on_off(boolean relogio_on_off){
-        this.relogio_on_off = relogio_on_off;
+
+    public void status_botoes(){
+        if(botao_a = false){
+            System.out.println("Botão A ativado");
+        }
+        else {
+            System.out.println("Botão A desativado");
+        }
     }
 
-    public void status(){
-        System.out.println("Status do Relógio");
-        System.out.println("são exatamente: " + hora_do_dia);
-        System.out.println("Hora na Alemanha: " );
-        System.out.println("O relógio está ativado ?" + this.getRelogio_on_off());
-        System.out.println("A tela está ativada ?" + this.gettTela_on_off());
-        System.out.println("A pulseira é de " + this.getPulseira());
-        System.out.println("O botão está ativado ?" + this.getBotoes_on_off());
-        System.out.println("A bateria está em " + this.getBateria() + "%");
+    public void tela_tempo(){
+        if(tela_tempo > 30){
+            System.out.println("Tela desligando");
+        }
+    }
+    public void status_relogio(){
+        System.out.println("Informações do relógio:");
+        System.out.println("A tela está: "+ getTela_tempo());
+        System.out.println("A tela é do tipo: " + getTela_tipo());
+        System.out.println("A pulseira é do material: " + getPulseira());
 
     }
 }

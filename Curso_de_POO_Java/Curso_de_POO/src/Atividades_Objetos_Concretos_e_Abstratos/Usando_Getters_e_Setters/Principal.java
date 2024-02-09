@@ -24,9 +24,9 @@ package Atividades_Objetos_Concretos_e_Abstratos.Usando_Getters_e_Setters;
 * */
 public class Principal {
     public static void main(String[] args) {
-        Relogio r1 = new Relogio(true, true, "couro", "16:27", "20:27", 43);
-        r1.status();
-        Relogio r2 = new Relogio(false, false, "silicone", "16:27", "20:27", 43);
-        r2.status();
+        Relogio r1 = new Relogio("Digital", true,31,  "couro", "titânio", true, false, false , false, 67.5f);
+        r1.status_botoes();
+        r1.tela_tempo();
+        r1.status_relogio();
     }
 }
